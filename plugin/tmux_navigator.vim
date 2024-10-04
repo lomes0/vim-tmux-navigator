@@ -20,7 +20,7 @@ if !get(g:, 'tmux_navigator_no_mappings', 0)
   nnoremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
   nnoremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
   nnoremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
-  nnoremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
+  "nnoremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
 
   if !get(g:, 'tmux_navigator_disable_netrw_workaround', 0)
     if !exists('g:Netrw_UserMaps')
@@ -36,7 +36,7 @@ if empty($TMUX)
   command! TmuxNavigateDown call s:VimNavigate('j')
   command! TmuxNavigateUp call s:VimNavigate('k')
   command! TmuxNavigateRight call s:VimNavigate('l')
-  command! TmuxNavigatePrevious call s:VimNavigate('p')
+  "command! TmuxNavigatePrevious call s:VimNavigate('p')
   finish
 endif
 
@@ -44,7 +44,7 @@ command! TmuxNavigateLeft call s:TmuxAwareNavigate('h')
 command! TmuxNavigateDown call s:TmuxAwareNavigate('j')
 command! TmuxNavigateUp call s:TmuxAwareNavigate('k')
 command! TmuxNavigateRight call s:TmuxAwareNavigate('l')
-command! TmuxNavigatePrevious call s:TmuxAwareNavigate('p')
+"command! TmuxNavigatePrevious call s:TmuxAwareNavigate('p')
 
 if !exists("g:tmux_navigator_save_on_switch")
   let g:tmux_navigator_save_on_switch = 0
